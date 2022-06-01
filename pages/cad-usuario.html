@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Alunos</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- =========== BOXICONS =========== -->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <div class="logo__content">
+      <div class="logo">
+        <i class='bx bxl-c-plus-plus'></i>
+        <div class="logo__name">Logo</div>
+      </div>
+      <i class='bx bx-menu' id='icon-logo'></i>
+    </div>
+    <ul class="nav__list">
+
+      <li>
+        <a href="../index.html">
+          <i class='bx bx-home-alt-2'></i>
+          <span class="links__name">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-user'></i>
+          <span class="links__name">Cad. Aluno</span>
+        </a>
+        <span class="tooltip">Cad. Aluno</span>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2'></i>
+          <span class="links__name">Análises</span>
+        </a>
+        <span class="tooltip">Análises</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-folder'></i>
+          <span class="links__name">Gerenciador</span>
+        </a>
+        <span class="tooltip">Gerenciador</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="links__name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+    </ul>
+    <div class="profile__content">
+      <div class="profile">
+        <div class="profile__details">
+          <img src="./assets/images/di.jpg" alt="">
+          <div class="name__job">
+            <div class="name">Diomar</div>
+            <div class="job">Desenvolvedor</div>
+          </div>
+        </div>
+        <i class='bx bx-log-out' id="log__out"></i>
+      </div>
+    </div>
+  </div>
+  <!-- ===== FIM SIDEBAR ====== -->
+
+  <section class="cad__usuario-content container">
+    <h1>Cadastrar Usuários</h1>
+    <div class="form__usuario-content">
+
+      <div class="area__dados-pessoais">
+        <span>Dados Pessoais</span>
+        <div class="dados__pessoais">
+          <label class="item__usuario">
+            <input type="text" id="nomeUsuario" required placeholder=" ">
+            <span>Nome</span>
+          </label>
+          <label class="item__usuario">
+            <input type="date" id="dtNacimento" required placeholder=" ">
+            <span>Dt. Nascimento</span>
+          </label>
+          <label class="item__usuario">
+            <input type="text" id="cpfUsuario" required placeholder=" ">
+            <span>CPF</span>
+          </label>
+          <label class="item__usuario">
+            <input type="email" id="emailUsuario" placeholder=" ">
+            <span>Email</span>
+          </label>
+          <label class="item__usuario">
+            <input type="tel" id="telUsuario" placeholder=" ">
+            <span>Telefone</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="area__endereco">
+        <span>Endereço</span>
+        <div class="endereco">
+          <label class="item__usuario">
+            <input type="text" id="nomeUsuario" required placeholder=" ">
+            <span>Cep</span>
+          </label>
+          <label class="item__usuario">
+            <input type="date" id="dtNacimento" required placeholder=" ">
+            <span>Rua</span>
+          </label>
+          <label class="item__usuario">
+            <input type="text" id="cpfUsuario" required placeholder=" ">
+            <span>Bairro</span>
+          </label>
+          <label class="item__usuario">
+            <input type="email" id="emailUsuario" placeholder=" ">
+            <span>Cidade</span>
+          </label>
+          <label class="item__usuario">
+            <input type="text" id="telUsuario" placeholder=" ">
+            <span>UF</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCRIPTS ====== -->
+  <script src="../main.js"></script>
+</body>
+
+</html>
