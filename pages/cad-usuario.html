@@ -5,11 +5,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro de Alunos</title>
+  <title>Sistema Escolar</title>
 
+  <!-- ======= STYLESSHEET ======= -->
   <link rel="stylesheet" href="../css/style.css">
 
-  <!-- =========== BOXICONS =========== -->
+  <!-- ======= SCRIPT MAIN ======= -->
+  <script src="../js/main.js" defer></script>
+
+  <!-- ======= BOXICONS ========== -->
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -35,9 +39,9 @@
       <li>
         <a href="#">
           <i class='bx bx-user'></i>
-          <span class="links__name">Cad. Aluno</span>
+          <span class="links__name">Cad. Usuário</span>
         </a>
-        <span class="tooltip">Cad. Aluno</span>
+        <span class="tooltip">Cad. Usuário</span>
       </li>
 
       <li>
@@ -65,7 +69,7 @@
     <div class="profile__content">
       <div class="profile">
         <div class="profile__details">
-          <img src="./assets/images/di.jpg" alt="">
+          <img src="../assets/images/di.jpg" alt="">
           <div class="name__job">
             <div class="name">Diomar</div>
             <div class="job">Desenvolvedor</div>
@@ -77,66 +81,24 @@
   </div>
   <!-- ===== FIM SIDEBAR ====== -->
 
-  <section class="cad__usuario-content container">
-    <h1>Cadastrar Usuários</h1>
-    <div class="form__usuario-content">
-
-      <div class="area__dados-pessoais">
-        <span>Dados Pessoais</span>
-        <div class="dados__pessoais">
-          <label class="item__usuario">
-            <input type="text" id="nomeUsuario" required placeholder=" ">
-            <span>Nome</span>
-          </label>
-          <label class="item__usuario">
-            <input type="date" id="dtNacimento" required placeholder=" ">
-            <span>Dt. Nascimento</span>
-          </label>
-          <label class="item__usuario">
-            <input type="text" id="cpfUsuario" required placeholder=" ">
-            <span>CPF</span>
-          </label>
-          <label class="item__usuario">
-            <input type="email" id="emailUsuario" placeholder=" ">
-            <span>Email</span>
-          </label>
-          <label class="item__usuario">
-            <input type="tel" id="telUsuario" placeholder=" ">
-            <span>Telefone</span>
-          </label>
-        </div>
-      </div>
-
-      <div class="area__endereco">
-        <span>Endereço</span>
-        <div class="endereco">
-          <label class="item__usuario">
-            <input type="text" id="nomeUsuario" required placeholder=" ">
-            <span>Cep</span>
-          </label>
-          <label class="item__usuario">
-            <input type="date" id="dtNacimento" required placeholder=" ">
-            <span>Rua</span>
-          </label>
-          <label class="item__usuario">
-            <input type="text" id="cpfUsuario" required placeholder=" ">
-            <span>Bairro</span>
-          </label>
-          <label class="item__usuario">
-            <input type="email" id="emailUsuario" placeholder=" ">
-            <span>Cidade</span>
-          </label>
-          <label class="item__usuario">
-            <input type="text" id="telUsuario" placeholder=" ">
-            <span>UF</span>
-          </label>
-        </div>
-      </div>
+  <header class="header__container">
+    <div class="navbar">
+      <div class="relogio">Relogio</div>
+      <div class="calendario">Calendario</div>
     </div>
-  </section>
+  </header>
+  <!-- ===== FIM DO HEADER ===== -->
 
-  <!-- ===== SCRIPTS ====== -->
-  <script src="../main.js"></script>
+  <section class="cad__usuario-content">
+    <h1>Cadastrar Usuários</h1>
+  </section>
+  <!-- ===== FIM DA CAD__USUARIO====== -->
+
+  <footer class="footer__container">
+    Sistema Escolar
+  </footer>
+  <!-- ===== FIM DO FOOTER ====== -->
+
 </body>
 
 </html>

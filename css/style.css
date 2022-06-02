@@ -5,21 +5,54 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --blue: #4e73df;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #e74a3b;
+  --orange: #fd7e14;
+  --yellow: #f6c23e;
+  --green: #1cc88a;
+  --teal: #20c9a6;
+  --cyan: #36b9cc;
+  --white: #fff;
+  --gray: #858796;
+  --gray-dark: #5a5c69;
+  --primary: #4e73df;
+  --secondary: #858796;
+  --success: #1cc88a;
+  --info: #36b9cc;
+  --warning: #f6c23e;
+  --danger: #e74a3b;
+  --light: #f8f9fc;
+  --dark: #5a5c69;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+}
+
 body {
   position: relative;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
+  background: #fff;
 }
 
-.container {
-  position: absolute;
-  height: 100%;
-  width: calc(100% - 78px);
-  left: 78px;
-  transition: all 0.5 ease;
-  top: 2rem;
+.sidebar.active~.home__content,
+.sidebar.active~.cad__usuario-content,
+.sidebar.active~.header__container,
+.sidebar.active~.footer__container {
+  width: calc(100% - 240px);
+  left: 240px;
 }
+
+/* ==== FIM CONFIGURAÇÕES PADRÃO ==== */
 
 .sidebar {
   position: fixed;
@@ -28,9 +61,10 @@ body {
   height: 100%;
   width: 78px;
   height: 100%;
-  background: #11101d;
+  background: #2e3267;
   padding: 6px 14px;
   transition: all 0.5s ease;
+  z-index: 5;
 }
 
 .sidebar.active {
@@ -201,7 +235,7 @@ body {
 }
 
 .sidebar.active .profile__content .profile {
-  background: #1d1b31;
+  background: #222944;
 }
 
 .profile__content .profile .profile__details {
@@ -261,278 +295,66 @@ body {
 
 /* ===== FIM SIDEBAR ====== */
 
-.home__content {
+.header__container {
+  position: relative;
   display: flex;
   justify-content: center;
-
-}
-
-.sidebar.active~.home__content {
-  width: calc(100% - 240px);
-  left: 240px;
-}
-
-/* ===== FIM DA HOME====== */
-
-
-
-.cad__usuario-content {
-  display: flex;
   align-items: center;
-  flex-direction: column;
-  width: 100%;
+  height: 5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(153, 152, 152, 0.2);
+  background-color: #f8f9fc;
+}
+
+.navbar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 80%;
   height: 100%;
 }
 
-.form__usuario-content {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.relogio {
+  margin: 5rem;
+}
+
+.calendario {}
+
+/* ===== FIM NAVBAR ====== */
+
+.home__content {
   position: relative;
-  top: 3rem;
-}
-
-.area__dados-pessoais {
-  display: flex;
-  flex-direction: column;
-}
-
-.area__dados-pessoais span {
-  font-size: 18px;
-  margin-left: 1rem;
-}
-
-.dados__pessoais {
-  display: flex;
-  justify-content: center;
-}
-
-.area__endereco span {
-  font-size: 18px;
-  margin-left: 1rem;
-}
-
-.area__endereco {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2rem;
-}
-
-.endereco {
-  display: flex;
-  justify-content: center;
-}
-
-.form__usuario-content .item__usuario {
-  margin: .5rem 1rem;
-}
-
-.item__usuario input {
-  display: block;
-  padding: .8rem;
-  margin-top: .2rem;
-}
-
-.sidebar.active~.cad__usuario-content {
-  width: calc(100% - 240px);
-  left: 240px;
-}
-
-/* ===== FIM DA CAD. USUÁRIO ====== */
-
-
-
-
-.item__usuario {
-  --pure-material-safari-helper1: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
-  position: relative;
-  display: inline-block;
-  padding-top: 6px;
-  font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
-  font-size: 16px;
-  line-height: 1.5;
+  padding-top: 3rem;
   overflow: hidden;
-}
-
-/* Input, Textarea */
-.item__usuario>input,
-.item__usuario>textarea {
-  box-sizing: border-box;
-  margin: 0;
-  border: solid 1px;
-  /* Safari */
-  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
-  border-top-color: transparent;
-  border-radius: 4px;
-  padding: 15px 13px 15px;
-  width: 100%;
-  height: inherit;
-  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
-  background-color: transparent;
-  box-shadow: none;
-  /* Firefox */
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  caret-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
-  transition: border 0.2s, box-shadow 0.2s;
-}
-
-/* Span */
-.item__usuario>input+span,
-.item__usuario>textarea+span {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
-  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+  justify-content: center;
+}
+
+/* ===== FIM HOME ====== */
+
+.cad__usuario-content {
+  position: relative;
+  padding-top: 3rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+/* ===== FIM DA CAD__USUARIO====== */
+
+.footer__container {
+  position: fixed;
+  bottom: 0;
+  display: flex;
   width: 100%;
-  max-height: 100%;
-  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
-  font-size: 75%;
-  line-height: 15px;
-  cursor: text;
-  transition: color 0.2s, font-size 0.2s, line-height 0.2s;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  overflow: hidden;
+  padding: .75rem 1.25rem;
+  background-color: #f8f9fc;
+  border-top: 1px solid #f7f8fa
 }
 
-/* Corners */
-.item__usuario>input+span::before,
-.item__usuario>input+span::after,
-.item__usuario>textarea+span::before,
-.item__usuario>textarea+span::after {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  margin-top: 6px;
-  border-top: solid 1px;
-  border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
-  min-width: 10px;
-  height: 8px;
-  pointer-events: none;
-  box-shadow: inset 0 1px transparent;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.item__usuario>input+span::before,
-.item__usuario>textarea+span::before {
-  margin-right: 4px;
-  border-left: solid 1px transparent;
-  border-radius: 4px 0;
-}
-
-.item__usuario>input+span::after,
-.item__usuario>textarea+span::after {
-  flex-grow: 1;
-  margin-left: 4px;
-  border-right: solid 1px transparent;
-  border-radius: 0 4px;
-}
-
-/* Hover */
-.item__usuario:hover>input,
-.item__usuario:hover>textarea {
-  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
-  border-top-color: transparent;
-}
-
-.item__usuario:hover>input+span::before,
-.item__usuario:hover>textarea+span::before,
-.item__usuario:hover>input+span::after,
-.item__usuario:hover>textarea+span::after {
-  border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
-}
-
-.item__usuario:hover>input:not(:focus):placeholder-shown,
-.item__usuario:hover>textarea:not(:focus):placeholder-shown {
-  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
-}
-
-/* Placeholder-shown */
-.item__usuario>input:not(:focus):placeholder-shown,
-.item__usuario>textarea:not(:focus):placeholder-shown {
-  border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
-}
-
-.item__usuario>input:not(:focus):placeholder-shown+span,
-.item__usuario>textarea:not(:focus):placeholder-shown+span {
-  font-size: inherit;
-  line-height: 68px;
-}
-
-.item__usuario>input:not(:focus):placeholder-shown+span::before,
-.item__usuario>textarea:not(:focus):placeholder-shown+span::before,
-.item__usuario>input:not(:focus):placeholder-shown+span::after,
-.item__usuario>textarea:not(:focus):placeholder-shown+span::after {
-  border-top-color: transparent;
-}
-
-/* Focus */
-.item__usuario>input:focus,
-.item__usuario>textarea:focus {
-  border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
-  border-top-color: transparent;
-  box-shadow: inset 1px 0 var(--pure-material-safari-helper1), inset -1px 0 var(--pure-material-safari-helper1), inset 0 -1px var(--pure-material-safari-helper1);
-  outline: none;
-}
-
-.item__usuario>input:focus+span,
-.item__usuario>textarea:focus+span {
-  color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
-}
-
-.item__usuario>input:focus+span::before,
-.item__usuario>input:focus+span::after,
-.item__usuario>textarea:focus+span::before,
-.item__usuario>textarea:focus+span::after {
-  border-top-color: var(--pure-material-safari-helper1) !important;
-  box-shadow: inset 0 1px var(--pure-material-safari-helper1);
-}
-
-/* Disabled */
-.item__usuario>input:disabled,
-.item__usuario>input:disabled+span,
-.item__usuario>textarea:disabled,
-.item__usuario>textarea:disabled+span {
-  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
-  border-top-color: transparent !important;
-  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
-  pointer-events: none;
-}
-
-.item__usuario>input:disabled+span::before,
-.item__usuario>input:disabled+span::after,
-.item__usuario>textarea:disabled+span::before,
-.item__usuario>textarea:disabled+span::after {
-  border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
-}
-
-.item__usuario>input:disabled:placeholder-shown,
-.item__usuario>input:disabled:placeholder-shown+span,
-.item__usuario>textarea:disabled:placeholder-shown,
-.item__usuario>textarea:disabled:placeholder-shown+span {
-  border-top-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38) !important;
-}
-
-.item__usuario>input:disabled:placeholder-shown+span::before,
-.item__usuario>input:disabled:placeholder-shown+span::after,
-.item__usuario>textarea:disabled:placeholder-shown+span::before,
-.item__usuario>textarea:disabled:placeholder-shown+span::after {
-  border-top-color: transparent !important;
-}
-
-/* Faster transition in Safari for less noticable fractional font-size issue */
-@media not all and (min-resolution:.001dpcm) {
-  @supports (-webkit-appearance:none) {
-
-    .item__usuario>input,
-    .item__usuario>input+span,
-    .item__usuario>textarea,
-    .item__usuario>textarea+span,
-    .item__usuario>input+span::before,
-    .item__usuario>input+span::after,
-    .item__usuario>textarea+span::before,
-    .item__usuario>textarea+span::after {
-      transition-duration: 0.1s;
-    }
-  }
-}
+/* ===== FIM DO FOOTER ====== */
