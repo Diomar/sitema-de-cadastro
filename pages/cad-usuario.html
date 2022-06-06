@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -7,18 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sistema Escolar</title>
 
-  <!-- ======= STYLESSHEET ======= -->
+  <!-- ======= Stylesheet ======= -->
   <link rel="stylesheet" href="../css/style.css">
 
-  <!-- ======= SCRIPT MAIN ======= -->
+  <!-- ======= Scrpt Main ======= -->
   <script src="../js/main.js" defer></script>
 
-  <!-- ======= BOXICONS ========== -->
+  <!-- ======= Boxicons ========== -->
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 
+  <!-- ===== Sidebar ====== -->
   <div class="sidebar">
     <div class="logo__content">
       <div class="logo">
@@ -66,38 +67,105 @@
         <span class="tooltip">Setting</span>
       </li>
     </ul>
+
+    <!-- ===== Button Sair ====== -->
     <div class="profile__content">
       <div class="profile">
-        <div class="profile__details">
-          <img src="../assets/images/di.jpg" alt="">
-          <div class="name__job">
-            <div class="name">Diomar</div>
-            <div class="job">Desenvolvedor</div>
-          </div>
-        </div>
         <i class='bx bx-log-out' id="log__out"></i>
       </div>
     </div>
   </div>
-  <!-- ===== FIM SIDEBAR ====== -->
 
+  <!-- ===== Header ===== -->
   <header class="header__container">
     <div class="navbar">
-      <div class="relogio">Relogio</div>
-      <div class="calendario">Calendario</div>
+      <h1>Cadastrar Usuários</h1>
     </div>
   </header>
-  <!-- ===== FIM DO HEADER ===== -->
 
-  <section class="cad__usuario-content">
-    <h1>Cadastrar Usuários</h1>
+  <!-- ===== Cadastro__Usuario ====== -->
+  <section class="cad__usuario-contentainer">
+
+    <div class="cad__usuario-content">
+      <!-- Dados Pessoais -->
+      <div class="cad__usuario-dados-pessoais">
+        <h2>Dados pessoais</h2>
+        <form action="" class="dados__pessoais">
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" ">
+            <span>Digite o Nome</span>
+          </label>
+
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" ">
+            <span>Sexo</span>
+          </label>
+
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" ">
+            <span>Cpf</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" ">
+            <span>Dt. Nascimento</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" ">
+            <span>Email</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" ">
+            <span>Telefone</span>
+          </label>
+        </form>
+      </div>
+
+      <!-- Dados de Endereço -->
+      <div class="cad__usuario-dados-endereco">
+        <h2>Endereço</h2>
+        <form action="" class="dados__endereco">
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" ">
+            <span>Cep</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" ">
+            <span>Rua</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" ">
+            <span>Nº Da Residência</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" ">
+            <span>Bairro</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" ">
+            <span>Complemento</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" ">
+            <span>Cidade</span>
+          </label>
+          <label class="pure-material-textfield-outlined">
+            <input placeholder=" ">
+            <span>Estado</span>
+          </label>
+        </form>
+      </div>
+
+      <div class="button-cadastrar">
+        <button id="cadastrar">Cadastrar</button>
+      </div>
+    </div>
+
   </section>
-  <!-- ===== FIM DA CAD__USUARIO====== -->
 
+  <!-- ===== Footer ====== -->
   <footer class="footer__container">
     Sistema Escolar
   </footer>
-  <!-- ===== FIM DO FOOTER ====== -->
 
 </body>
 

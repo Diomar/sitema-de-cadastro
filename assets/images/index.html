@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- =========== BOXICONS =========== -->
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <title>Deshbord</title>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo__content">
+      <div class="logo">
+        <i class='bx bxl-c-plus-plus'></i>
+        <div class="logo__name">Logo</div>
+      </div>
+      <i class='bx bx-menu' id='icon-logo'></i>
+    </div>
+    <ul class="nav__list">
+      <li>
+        <i class='bx bx-search'></i>
+        <input type="text" placeholder="Pesquisar">
+        <span class="tooltip">Pesquisar</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links__name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-user'></i>
+          <span class="links__name">Mensagens</span>
+        </a>
+        <span class="tooltip">Mensagens</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-chat'></i>
+          <span class="links__name">Chat</span>
+        </a>
+        <span class="tooltip">Chat</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-pie-chart-alt-2'></i>
+          <span class="links__name">Análises</span>
+        </a>
+        <span class="tooltip">Análises</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-folder'></i>
+          <span class="links__name">Gerenciador</span>
+        </a>
+        <span class="tooltip">Gerenciador</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="links__name">Setting</span>
+        </a>
+        <span class="tooltip">Setting</span>
+      </li>
+    </ul>
+    <div class="profile__content">
+      <div class="profile">
+        <div class="profile__details">
+          <img src="./assets/images/di.jpg" alt="">
+          <div class="name__job">
+            <div class="name">Diomar</div>
+            <div class="job">Desenvolvedor</div>
+          </div>
+        </div>
+        <i class='bx bx-log-out' id="log__out"></i>
+      </div>
+    </div>
+  </div>
+  <!-- ===== FIM SIDEBAR ====== -->
+
+  <div class="home__content">
+    <div class="text">HOME</div>
+  </div>
+  <!-- ===== FIM HOME ====== -->
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
