@@ -5,6 +5,6 @@ btn.onclick = function () {
   sidebar.classList.toggle("active");
 }
 
-searchBtn.onclick = function () {
-  sidebar.classList.toggle("active");
-}
+
+
+
