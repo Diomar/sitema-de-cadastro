@@ -451,6 +451,13 @@ button {
 
 }
 
+select {
+  padding: 1rem 0.75rem;
+  margin-top: .4rem;
+  border-radius: 4px;
+  width: 7.3rem;
+}
+
 /*  ==== Inputs do Formulário ===== */
 .pure-material-textfield-outlined {
   --pure-material-safari-helper1: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
