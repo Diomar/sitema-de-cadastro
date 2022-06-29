@@ -1,5 +1,6 @@
 let btn = document.querySelector("#icon-logo");
 let sidebar = document.querySelector(".sidebar");
+let input__nome = document.querySelector("#nome");
 
 
 
@@ -7,5 +8,6 @@ let sidebar = document.querySelector(".sidebar");
 btn.onclick = function () {
   sidebar.classList.toggle("active");
 }
+
 
 
